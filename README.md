@@ -1,6 +1,6 @@
 # slack-lunchtogether
 ![img.png](result_image/result.png)
-- 월-금요일 11시, [playwright](https://playwright.dev/)를 이용해 카카오 채널의 프로필 메뉴 이미지를 다운로드하고 OCR을 [메뉴 이미지](result_image/ok/target.jpg)를 [OCR 대상 이미지](result_image/ok/crop.jpg)로 크롭 후, [파싱 결과](result_image/ok/result.jpg)를 슬랙으로 발송합니다.
+- 월-금요일 11시, [playwright](https://playwright.dev/)를 이용해 카카오 채널의 프로필 메뉴 이미지를 다운로드 후 [PIL](https://python-pillow.org/)을 이용하여 [메뉴 이미지](result_image/ok/target.jpg)를  [OCR 대상 이미지](result_image/ok/crop.jpg)로 크롭 및 변경 후, [ppOCR](https://github.com/PaddlePaddle/PaddleOCR)을 이용해  [파싱 결과](result_image/ok/result.jpg)를 슬랙으로 발송합니다.
   - [대상 이미지](result_image/fail/target.jpg)가 메뉴 표기가 아닌 경우, [파싱 진행 후](result_image/fail/result.jpg) 문자열을 파악하여 종료합니다.
     - 수정 및 테스트 진행 시 하기 변수를 수정하여 발송 및 다운로드 동작을 방지할 수 있습니다.
       ```python
