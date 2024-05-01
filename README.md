@@ -60,6 +60,9 @@ python -m pip install --upgrade pip
 
 ```bash
 pip install -r requirements.txt
+# 경우에 따라 실행
+# playwright install-deps 
+playwright install
 ```
 
 ## 🔧 Config
