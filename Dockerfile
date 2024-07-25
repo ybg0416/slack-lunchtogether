@@ -1,3 +1,4 @@
+# 개발 당시(202405), Python 3.10 이상에서 ppOCR이 동작하지 아니함
 FROM python:3.10-slim AS require
 LABEL authors="YBG"
 
